@@ -1,0 +1,168 @@
+<!--Assignment-Displayer-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Assignments</title>
+  <style>
+    body {
+      @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+      margin: 0;
+      padding: 0;
+      background-color: #e0f7fa; /* Light blue background */
+    }
+    h1 {
+      background: linear-gradient(90deg, #1976d2, #1e88e5); /* Blue gradient */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      font-size: 36px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    h2 {
+      color: #1565c0; /* Darker blue */
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444; /* Slightly darker text for better readability */
+    }
+    .assignment {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+    .assignment-details {
+      margin-right: 20px;
+    }
+    .images {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .images img {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 3px solid #1976d2; /* Border matches the blue theme */
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transition for hover effects */
+      will-change: transform; /* Enable hardware acceleration */
+    }
+    .images img:hover {
+      transform: scale(1.1); /* Scale up image on hover */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .buttons button {
+      background-color: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, transform 0.2s;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .buttons button:hover {
+      background-color: #1e88e5;
+      transform: scale(1.05);
+    }
+    @media only screen and (max-width: 768px) {
+      .assignment {
+        flex-direction: column;
+      }
+      .assignment-details {
+        margin-right: 0;
+      }
+      .images {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>VIEW ALL OF MY ASSIGNMENTS HERE</h1>
+
+  <div class="assignment">
+    <div class="assignment-details">
+      <h2>Assignment 1 Details</h2>
+      <p>Assignment Name: Facebook Clone</p>
+      <p>Assignment Description: [This is the perfect clone of Facebook]</p>
+      <div class="buttons">
+        <button onclick="window.open('https://github.com/Muhibkhan999/Face-book-Assignment')">View Code</button>
+        <button onclick="window.open('https://muhibkhan999.github.io/Face-book-Assignment/')">View Program</button>
+      </div>
+    </div>
+    <div class="images">
+      <img src="./Images/Screenshot (20).png" alt="Image 1">
+    </div>
+  </div>
+
+  <div class="assignment">
+    <div class="assignment-details">
+      <h2>Assignment 2 Details</h2>
+      <p>Assignment Name: Sunzine Clone</p>
+      <p>Assignment Description: [This clone aims to mimic the original website Sunzine]</p>
+      <div class="buttons">
+        <button onclick="window.open('https://github.com/Muhibkhan999/Sunzine-Assignment')">View Code</button>
+        <button onclick="window.open('https://muhibkhan999.github.io/Sunzine-Assignment/')">View Program</button>
+      </div>
+    </div>
+    <div class="images">
+      <img src="./Images/Screenshot (18).png" alt="Image 4">
+      <img src="./Images/Screenshot (22).png" alt="Image 5">
+    </div>
+  </div>
+
+  <div class="assignment">
+    <div class="assignment-details">
+      <h2>Assignment 3 Details</h2>
+      <p>Assignment Name: Apple Clone</p>
+      <p>Assignment Description: [This Website aims to mimic the App Store]</p>
+      <div class="buttons">
+        <button onclick="window.open('https://github.com/Muhibkhan999/Apple-Clone.html')">View Code</button>
+        <button onclick="window.open('https://muhibkhan999.github.io/Apple-Clone.html/')">View Program</button>
+      </div>
+    </div>
+    <div class="images">
+      <img src="./Images/Screenshot (16).png" alt="Image 6">
+      <img src="./Images/Screenshot (23).png" alt="Image 6">
+      <img src="./Images/Screenshot (25).png" alt="Image 6">
+    </div>
+  </div>
+
+  <div class="assignment">
+    <div class="assignment-details">
+      <h2>Assignment 4 Details</h2>
+      <p>Assignment Name: Salt n Pepper</p>
+      <p>Assignment Description: [This Website aims to mimic Salt n Pepper]</p>
+      <div class="buttons">
+        <button onclick="window.open('https://github.com/Muhibkhan999/SaltnPepper-clone')">View Code</button>
+        <button onclick="window.open('https://muhibkhan999.github.io/SaltnPepper-clone/')">View Program</button>
+      </div>
+    </div>
+    <div class="images">
+      <img src="./Images/Screenshot (36).png" alt="Image 6">
+      <img src="./Images/Screenshot (37).png" alt="Image 6">
+      <img src="./Images/Screenshot (38).png" alt="Image 6">
+    </div>
+  </div>
+</body>
+</html>
