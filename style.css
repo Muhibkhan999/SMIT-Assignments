@@ -1269,6 +1269,11 @@
       font-size: 16px;
       margin-right: 6px;
     }
+
+    .images img {
+      max-width: 80%;
+      height: auto;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -1280,6 +1285,11 @@
     .dark-mode-toggle::before {
       font-size: 14px;
       margin-right: 4px;
+    }
+
+    .images img {
+      max-width: 70%;
+      height: auto;
     }
   }
   .menu-toggle {
@@ -1327,6 +1337,11 @@
       .content {
         margin-left: 170px;
       }
+
+      .images img {
+        max-width: 90%;
+        height: auto;
+      }
     }
 
     @media (max-width: 773px) {
@@ -1339,7 +1354,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 250px;
+        width: 80%;
+        max-width: 250px;
         height: 100%;
         z-index: 999;
         transition: transform 0.3s ease;
@@ -1358,29 +1374,29 @@
       }
 
       .content.sidebar-active {
-        margin-left: 250px;
+        margin-left: 80%;
       }
 
       h1 {
-        font-size: calc(24px + 1vw);
+        font-size: calc(20px + 2vw);
         padding: 15px;
       }
 
       h2, .todo-list h2, .dashboard-section h3, .interactive h2, .about-me h2 {
-        font-size: calc(18px + 1vw);
+        font-size: calc(16px + 1.5vw);
       }
 
       p, .dashboard-section ul li, .todo-list ul li {
-        font-size: calc(14px + 0.5vw);
+        font-size: calc(12px + 1vw);
       }
 
       .buttons a {
         padding: 8px 15px;
-        font-size: calc(12px + 0.5vw);
+        font-size: calc(10px + 1vw);
       }
 
       .images img {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
       }
     }
@@ -1395,20 +1411,25 @@
       }
 
       h1 {
-        font-size: calc(20px + 1vw);
+        font-size: calc(18px + 2vw);
       }
 
       h2, .todo-list h2, .dashboard-section h3, .interactive h2, .about-me h2 {
-        font-size: calc(16px + 1vw);
+        font-size: calc(14px + 1.5vw);
       }
 
       p, .dashboard-section ul li, .todo-list ul li {
-        font-size: calc(12px + 0.5vw);
+        font-size: calc(10px + 1vw);
       }
 
       .buttons a {
         padding: 6px 12px;
-        font-size: calc(10px + 0.5vw);
+        font-size: calc(8px + 1vw);
+      }
+
+      .images img {
+        max-width: 70%;
+        height: auto;
       }
     }
 
@@ -1418,21 +1439,26 @@
       }
 
       h1 {
-        font-size: calc(18px + 1vw);
+        font-size: calc(16px + 2vw);
         padding: 10px;
       }
 
       h2, .todo-list h2, .dashboard-section h3, .interactive h2, .about-me h2 {
-        font-size: calc(14px + 1vw);
+        font-size: calc(12px + 1.5vw);
       }
 
       p, .dashboard-section ul li, .todo-list ul li {
-        font-size: calc(11px + 0.5vw);
+        font-size: calc(9px + 1vw);
       }
 
       .buttons a {
         padding: 5px 10px;
-        font-size: calc(9px + 0.5vw);
+        font-size: calc(7px + 1vw);
+      }
+
+      .images img {
+        max-width: 60%;
+        height: auto;
       }
     }
 

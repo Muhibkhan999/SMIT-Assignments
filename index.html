@@ -25,6 +25,13 @@
                 return false;
             }
 
+            // Real email validation
+            if (!isRealEmail(email)) {
+                event.preventDefault();
+                alert('Please enter your real email address. We do not accept disposable or temporary email addresses.');
+                return false;
+            }
+
             // Password validation
             var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
             if (!passwordRegex.test(password)) {
@@ -36,8 +43,34 @@
             return true;
         }
 
-        
-
+        function isRealEmail(email) {
+            var domain = email.split('@')[1];
+            
+            // List of disposable email domains
+            var disposableDomains = ['tempmail.com', 'throwawaymail.com', 'fakeinbox.com', 'mailinator.com', 'guerrillamail.com', '10minutemail.com', 'yopmail.com'];
+            
+            // Check if the email domain is in the list of disposable domains
+            if (disposableDomains.includes(domain)) {
+                return false;
+            }
+            
+            // List of common email providers (you can expand this list)
+            var commonProviders = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'protonmail.com', 'aol.com'];
+            
+            // Check if the email domain is a common provider
+            if (commonProviders.includes(domain)) {
+                return true;
+            }
+            
+            // For domains not in either list, we'll do an additional check
+            // This could be replaced with a more robust check, such as verifying MX records
+            var domainParts = domain.split('.');
+            if (domainParts.length >= 2 && domainParts[domainParts.length - 1].length >= 2) {
+                return true;
+            }
+            
+            return false;
+        }
 
 function togglePassword() {
     var passwordInput = document.getElementById('password');
