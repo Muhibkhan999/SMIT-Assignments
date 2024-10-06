@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Login.css">
+    <script>
+        function validateForm(event) {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email.trim() === '' || password.trim() === '') {
+                event.preventDefault();
+                alert('Please fill out all required fields.');
+                return false;
+            }
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                event.preventDefault();
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Password validation
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                event.preventDefault();
+                alert('Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.');
+                return false;
+            }
+
+            // Check if email and password are correct
+            if (email !== 'correct@email.com' || password !== 'CorrectPassword123!') {
+                event.preventDefault();
+                alert('Invalid email or password. Please try again.');
+                return false;
+            }
+
+            return true;
+        }
+
+        
+
+
+function togglePassword() {
+    var passwordInput = document.getElementById('password');
+    var toggleButton = document.getElementById('togglePassword');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text'; // Show password
+        toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Change to eye-slash icon
+    } else {
+        passwordInput.type = 'password'; // Hide password
+        toggleButton.innerHTML = '<i class="fas fa-eye"></i>'; // Change to eye icon
+    }
+}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="SMIT.html" method="get" onsubmit="return validateForm(event)">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-envelope"></i>
+                        <input type="email" class="login__input" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password" id="password" required>
+                        <button type="button" id="togglePassword" onclick="togglePassword()" style="background: none; border: none; cursor: pointer;">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <button type="submit" class="button login__submit">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login">
+                    <h3>Log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
+	<form onsubmit="return validateForm(event)">
+		<input type="email" id="email" required>
+		<div class="password-container">
+			<input type="password" id="password" required>
+			<button type="button" id="togglePassword" onclick="togglePassword()">
+				<i class="fas fa-eye"></i>
+			</button>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+	
+</body>
+</html>
